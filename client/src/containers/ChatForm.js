@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { postChat } from '../actions';
+import { connect } from 'react-redux'
 
-export default class ChatForm extends Component {
+class ChatForm extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "", message: "" };
@@ -15,13 +17,10 @@ export default class ChatForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const id = Date.now();
-    this.props.addChat({
-      id,
-      name: this.state.name,
-      message: this.state.message,
-      sent: true
-    });
+    this.props.addChat(
+      this.state.name,
+      this.state.message
+    );
     this.setState({ message: "" })
   }
 
@@ -60,3 +59,12 @@ export default class ChatForm extends Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  addChat: (name, message) => dispatch(postChat(name, message))
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ChatForm)

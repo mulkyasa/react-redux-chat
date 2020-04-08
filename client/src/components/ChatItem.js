@@ -21,7 +21,11 @@ export default function ChatItem(props) {
               className="btn btn-link py-0 px-0"
             >
               {/* {console.log(props.chats.sent, "chatItem")} */}
-              {props.chats.sent ? <i className="text-dark fa fa-trash-o"></i> : <i className="text-dark fa fa-repeat"></i>}
+              {props.chats.sent ? (
+                <i className="text-dark fa fa-trash-o"></i>
+              ) : (
+                <i className="text-dark fa fa-repeat"></i>
+              )}
             </button>
           </div>
           <ReactMarkdown

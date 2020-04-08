@@ -1,3 +1,3 @@
-<h1>React Chat</h1>
+<h1>React Redux Chat</h1>
 
-<p>Create a simple chat application using ReactJS, SocketIO and RESTful API</p>
+<p>Create a simple chat application using ReactJS, Redux, SocketIO and RESTful API</p>
