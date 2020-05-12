@@ -9,11 +9,10 @@ class ChatList extends Component {
   }
 
   render() {
-    // console.log(props.data, 'chatList')
     const listItems = this.props.chats.map((item, index) => (
       <ChatItem
         key={index}
-        chats={item}
+        chats={{...item}}
       />
     ));
 

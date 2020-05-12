@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import ChatList from "../containers/ChatList";
 import ChatForm from "../containers/ChatForm";
-import io from "socket.io-client";
-
-const socket = io("http://localhost:3000");
 
 export default class ChatBox extends Component {
   render() {

@@ -6,7 +6,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   delete: () => dispatch(deleteChat(ownProps.chats.id)),
   resend: () =>
     dispatch(
-      resendChat(ownProps.chat.id, ownProps.chat.name, ownProps.chat.message)
+      resendChat(ownProps.chats.id, ownProps.chats.name, ownProps.chats.message)
     ),
 });
 
